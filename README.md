@@ -10,7 +10,7 @@ Me is the codebase for a one-page personal website that is static and simple. Us
 -
 
 ## Why
-So, why not just use [About.me](https://about.me) or a [similar](https://www.squarespace.com/) service to create your one page site? Boring! More important than saving yourself the monthly or annual price (all you'll need to buy is your custom domain name), you get to add your personal touch to your brand. Plus you'll show off some technical competency.
+So, why not just use [About.me](https://about.me) or a [similar](https://www.squarespace.com/) service to create your site? Boring! More important than saving yourself the monthly or annual price (all you'll need to buy is your custom domain name), you get to add your personal touch to your brand. Plus you'll show off some technical competency.
 
 *Requirements*: You need to know how to 1) open the terminal and paste a few commands and 2) open source files in a text editor.
 
@@ -48,6 +48,7 @@ From your project directory, run
 And your site should open in the browser, running locally at http://localhost:3000/
 
 ![gulp serve](/docs/term-gulp-serve.png?raw=true)
+
 ![local site](/docs/site-local.png?raw=true)
 
 
@@ -89,6 +90,13 @@ For a large selection of free fonts, check out [Google Fonts](https://fonts.goog
 <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Droid+Serif:700' type="text/css">
 ```
 For color options look at [Google's Color Palette](https://material.google.com/style/color.html#color-color-palette). If you need help with the color variable names you can look them up here: `/app/styles/src/_color-definitions.scss`
+
+#### Social Icons
+
+To add icons such as social icons, use [Material Icons](https://materialdesignicons.com/), find your icon, and copy the svg code directly into `index.html`.
+This method inlines the SVG into our markup, saving the space of downloading the entire MDL set of hundreds of icons.
+![svg icon](/docs/icon-svg.png?raw=true)
+
 
 #### Favicons
 You can use [Real Favicon Generator](https://realfavicongenerator.net/) to generate your favicons (the little icon in the browser tab and bookmarks).
