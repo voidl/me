@@ -5,6 +5,8 @@ Live Demo: https://manny-mcmannerton.firebaseapp.com/
 
 Me is the codebase for a one-page personal website that is static and simple. Use it to brand yourself on the internet, similar to an about.me page. It is responsive, very fast, and easy to customize. The design is loosely based on an about.me template, and it uses the best web practices and technologies and top-tier free hosting.
 
+-
+
 ## Why
 So, why not just use [About.me](https://about.me) or a [similar](https://www.squarespace.com/) service to create your one page site? Boring! More important than saving yourself the monthly or annual price (all you'll need to buy is your custom domain name), you get to add your personal touch to your brand. Plus you'll show off some technical competency.
 
@@ -85,6 +87,7 @@ You'll need to install [node.js](https://nodejs.org/en/) in order to use npm on 
 
 #### Exceptions ahead!
 ![Firebase Setup](/docs/firebase-setup-2.png?raw=true)
+
 1. Skip the second step, `firebase init`, because that will overwrite some of our custom deployment settings. Instead, go to your Firebase console and copy your app id (in the image below the app id is test-3417d) and paste that in your `/.firebaserc` file where it says `your firebase app id goes here` (keep the quotes).  
 ![Firebaserc](/docs/atom-firebaserc.png?raw=true)
 ![Firebase New App](/docs/firebase-new-app.png?raw=true)
@@ -93,7 +96,11 @@ You'll need to install [node.js](https://nodejs.org/en/) in order to use npm on 
 ![Firebase Setup](/docs/term-gulp-deploy.png?raw=true)
 
 Now your site is live on your default firebase app domain name.
+
 ![Firebase Site](/docs/site-firebase.png?raw=true)
+
+On Mobile:
+
 ![Firebase Mobile](/docs/site-mobile.png?raw=true)
 
 All that's left is to connect your custom domain name from the Firebase app dashboard. If you want to stay on the Google train, head to [Google Domains](https://domains.google.com/registrar) to buy one. (Hint: check out https://domainr.com and https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains to come up with something unique.)
