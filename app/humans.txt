@@ -1,0 +1,10 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+  Manny McMannerton -- Guy
+
+# TECHNOLOGY COLOPHON
+
+  Google Web Starter Kit, Material Design Lite
