@@ -3,6 +3,8 @@ A one-page personal website project template.
 
 Live Demo: https://manny-mcmannerton.firebaseapp.com/
 
+# [![Me](/docs/site-firebase.png?raq=true)](https://manny-mcmannerton.firebaseapp.com/)
+
 Me is the codebase for a one-page personal website that is static and simple. Use it to brand yourself on the internet, similar to an about.me page. It is responsive, very fast, and easy to customize. The design is loosely based on an about.me template, and it uses the best web practices and technologies and top-tier free hosting.
 
 -
@@ -15,6 +17,10 @@ So, why not just use [About.me](https://about.me) or a [similar](https://www.squ
 ## Overview
 
 If you want to get straight to the setup, skip [here](#setup).
+
+This project is based on Google's Web Starter Kit.
+> [Web Starter Kit](https://developers.google.com/web/tools/starter-kit/) is an opinionated boilerplate for web development. Tools for building a great experience across many devices and [performance oriented](#web-performance). Helping you to stay productive following the best practices outlined in Google's [Web Fundamentals](https://developers.google.com/web/fundamentals/). A solid starting point for both professionals and newcomers to the industry.
+
 
 -
 
@@ -54,6 +60,35 @@ The site content is in the `app` folder, basically in two files: `index.html` an
 In order to start making changes to your site, just open your favorite text editor and load up those two files. With your site still running locally in the browser (from `gulp serve`), you can now make changes to your site and they will update automatically in the browser each time you save. This is because Web Starter Kit comes with browser-sync built in.
 
 ![atom index](/docs/atom-index.png?raw=true)
+
+#### Styles
+All of the custom styles for the site are in `/app/styles/main.scss` except a few variable settings such as font and colors. Since we're using the Material Design Lite framework locally, we can set custom variables in `app/styles/src/variables.scss`. Open it up and look for these two sections near the top:
+
+```scss
+/* ==========  TYPOGRAPHY  ========== */
+
+$preferred_font: 'Lato', 'Helvetica', 'Arial', sans-serif !default;
+$performance_font: 'Helvetica', 'Arial', sans-serif !default;
+```
+
+```scss
+/* ==========  Color & Themes  ========== */
+
+$color-primary: $palette-teal-400 !default;
+$color-primary-accented: $palette-teal-A400 !default;
+$color-primary-dark: $palette-teal-700 !default;
+$color-accent: $palette-blue-A400 !default;
+```
+
+For a large selection of free fonts, check out [Google Fonts](https://fonts.google.com/) and find a couple of good ones. Replace `'lato'` after `preferred_font` with your choice. The headline name font is set in a different file, `/app/styles/main.scss` in `h1`. Open `/app/index.html` and replace these stylesheet `<link>`s with the embed code from Google Fonts. If you know which font weights you want to use, specify that to slim the download.
+
+
+```html
+<!-- Material Design Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,500" type="text/css">
+<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Droid+Serif:700' type="text/css">
+```
+For color options look at [Google's Color Palette](https://material.google.com/style/color.html#color-color-palette). If you need help with the color variable names you can look them up here: `/app/styles/src/_color-definitions.scss`
 
 #### Favicons
 You can use [Real Favicon Generator](https://realfavicongenerator.net/) to generate your favicons (the little icon in the browser tab and bookmarks).
