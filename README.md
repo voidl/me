@@ -7,7 +7,17 @@ Live Demo: https://manny-mcmannerton.firebaseapp.com/
 
 Me is the codebase for a one-page personal website that is static and simple. Use it to brand yourself on the internet, similar to an about.me page. It is responsive, very fast, and easy to customize. The design is loosely based on an about.me template, and it uses the best web practices and technologies and top-tier free hosting.
 
--
+
+- [Why](#why)
+- [Overview](#overview)
+- [Setup](#setup)
+  - [Install](#install)
+  - [Customize Site](#customize-your-site)
+    - [Styles](#styles)
+    - [Icons](#icons)
+    - [Favicons](#favicons)
+    - [Conceal Email](#conceal-email)
+  - [Hosting](#deploy-to-host)
 
 ## Why
 So, why not just use [About.me](https://about.me) or a [similar](https://www.squarespace.com/) service to create your site? Boring! More important than saving yourself the monthly or annual price (all you'll need to buy is your custom domain name), you get to add your personal touch to your brand. Plus you'll show off some technical competency.
@@ -18,8 +28,15 @@ So, why not just use [About.me](https://about.me) or a [similar](https://www.squ
 
 If you want to get straight to the setup, skip [here](#setup).
 
+The goal is to have a high-performance, lean static site that uses up-to-date web standards and guidelines. To this end we use these kits from Google:
+
 This project is based on Google's Web Starter Kit.
 > [Web Starter Kit](https://developers.google.com/web/tools/starter-kit/) is an opinionated boilerplate for web development. Tools for building a great experience across many devices and [performance oriented](#web-performance). Helping you to stay productive following the best practices outlined in Google's [Web Fundamentals](https://developers.google.com/web/fundamentals/). A solid starting point for both professionals and newcomers to the industry.
+
+It uses Google's Material Design Lite front-end framework.
+> [Material Design Lite](https://getmdl.io/) components are created with CSS, JavaScript, and HTML. You can use the components to construct web pages and web apps that are attractive, consistent, and functional. Pages developed with MDL will adhere to modern web design principles like browser portability, device independence, and graceful degradation.
+
+The site should load minimal or no third party resources, be static, fully responsive for any device type, and benefit from upstream development in the tooling and front-end framework. Google's Web Starter Kit
 
 
 -
@@ -91,12 +108,11 @@ For a large selection of free fonts, check out [Google Fonts](https://fonts.goog
 ```
 For color options look at [Google's Color Palette](https://material.google.com/style/color.html#color-color-palette). If you need help with the color variable names you can look them up here: `/app/styles/src/_color-definitions.scss`
 
-#### Social Icons
+#### Icons
 
 To add icons such as social icons, use [Material Icons](https://materialdesignicons.com/), find your icon, and copy the svg code directly into `index.html`.
 This method inlines the SVG into our markup, saving the space of downloading the entire MDL set of hundreds of icons.
 ![svg icon](/docs/icon-svg.png?raw=true)
-
 
 #### Favicons
 You can use [Real Favicon Generator](https://realfavicongenerator.net/) to generate your favicons (the little icon in the browser tab and bookmarks).
@@ -108,13 +124,18 @@ Ignore the instructions (even though there is an option for Google Web Starter K
 
 ![favicon generator](/docs/favicon-generator-dl.png?raw=true)
 
+#### Conceal Email
+If you want to conceal your email address so it doesn't get scraped, you can use [Google's Mailhide service](https://www.google.com/recaptcha/admin#mailhide). Follow the instructions to get a link that you can paste into your button's `href`.
+
+TODO:
+- [ ] Replace Mailhide with Google reCaptcha v2
 
 ### Deploy to host
 You can host your site anywhere you can deliver static files (Github Pages, Amazon S3). We'll use Firebase, a Google app hosting platform that [recently announced](https://firebase.googleblog.com/2016/05/firebase-expands-to-become-unified-app-platform.html) a pricing update as part of their big platform update in May, 2016. The free tier was bumped up to 1GB file storage, 10GB transferred, and a custom domain, which is all we need for a static one-page website. Plus, you get a global CDN and an SSL certificate included by default (so you get your :lock: and https://).
 
 ![Firebase Pricing](/docs/firebase-pricing.png?raw=true)
 
-It's **very** easy to deploy your app to Firebase. Just head to https://firebase.google.com/ and follow the instructions to *Get Started*.
+It's easy to deploy your app to Firebase. Head to https://firebase.google.com/ and follow the instructions to *Get Started*.
 
 ![Firebase Home](/docs/firebase-home.png?raw=true)
 
