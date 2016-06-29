@@ -26,7 +26,7 @@ So, why not just use [About.me](https://about.me) or a [similar](https://www.squ
 
 ## Overview
 
-If you want to get straight to the setup, skip [here](#setup).
+*Skip straight to the [setup instructions](#setup).*
 
 The goal is to have a high-performance, lean static site that uses up-to-date web standards and guidelines. To this end we use these kits from Google:
 
@@ -36,7 +36,9 @@ This project is based on Google's Web Starter Kit.
 It uses Google's Material Design Lite front-end framework.
 > [Material Design Lite](https://getmdl.io/) components are created with CSS, JavaScript, and HTML. You can use the components to construct web pages and web apps that are attractive, consistent, and functional. Pages developed with MDL will adhere to modern web design principles like browser portability, device independence, and graceful degradation.
 
-The site should load minimal or no third party resources, be static, fully responsive for any device type, and benefit from upstream development in the tooling and front-end framework. Google's Web Starter Kit
+The site should load minimal or no third party resources, be static, fully responsive for any device type, and benefit from upstream development in the tooling and front-end framework. WSK includes tooling for minifying and concatenating code, removing unused styles, and optimizing images.
+
+Since this is a simple site without too many components, we won't need most of the MDL framework. Instead of requiring the whole framework externally and unnecessarily bloating our site, the CSS version of Material Design Lite has been swapped out for the Sass version and localized, so that we can eliminate the components we aren't using (such as menus, dialogs, sliders, tables, ripple effects). This has the added benefit of allowing for greater customization, such as using colors and fonts (set in `app/styles/src/_variables.scss`) outside of the official [Material color palette](https://getmdl.io/customize/index.html). Ideally user styles should still be kept in `app/styles/main.scss` to allow for easy upgrading of the MDL framework without overwriting customizations or requiring manual merging. If you need any [components](https://getmdl.io/components/index.html) that aren't included, they have been commented out (see `app/index.html`, `gulpfile.babel.js`, `app/styles/src/material-design-lite.scss`, [further info](https://github.com/google/web-starter-kit/blob/master/docs/mdl-sass.md)).  Other unnecessary components such as service workers have also been removed.
 
 
 -
