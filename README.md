@@ -174,6 +174,9 @@ All that's left is to connect your custom domain name from the Firebase app dash
 To update your site again you can just 1) make your changes to the appropriate `app` files - run `gulp serve` to preview the changes if you want, 2) run `gulp`, 3) run `firebase deploy`! :boom:
 
 -
+## Credits
+[Hipster Ipsum](http://hipsum.co/)
+
 ## License
 [Licensed](https://github.com/google/web-starter-kit/blob/master/LICENSE) under the Apache License, Version 2.0
 
