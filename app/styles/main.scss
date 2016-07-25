@@ -154,9 +154,9 @@ p a {
 #bio-pic {
 
   height: 100%;
-  @media (min-width: $grid-desktop-breakpoint) {
-    position: fixed;
-  }
+  // @media (min-width: $grid-desktop-breakpoint) {
+  //   position: fixed;
+  // }
   div {
     background: url('../images/me.jpg') no-repeat;
     background-size: cover;
